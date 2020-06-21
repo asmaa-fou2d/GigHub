@@ -23,9 +23,12 @@
         @Html.ActionLink("GigHub", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
       </div>
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li>@Html.ActionLink("Create Gig ", "Create", "Gigs")</li>
-        </ul>
+        @if (Request.IsAuthenticated)
+        {
+          <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Create Gig ", "Create", "Gigs")</li>
+          </ul>
+        }
         @Html.Partial("_LoginPartial")
       </div>
     </div>

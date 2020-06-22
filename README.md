@@ -2,6 +2,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Demo](#demo)
 
 ## General info
 This project is a simple MVC for Gigs.
@@ -17,4 +18,9 @@ Project is created with:
 To run this project:
 * Change the connection string at web.config file
 * PM> Update-Database 
+		
+## Demo
+You can check live demo here
+https://www.youtube.com/watch?v=DEiSFsETYMU
+
 	

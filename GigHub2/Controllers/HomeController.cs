@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using GigHub2.Models;
 using System.Data.Entity;
 using GigHub2.ViewModels;
+using Microsoft.AspNet.Identity;
 
 namespace GigHub2.Controllers
 {
@@ -21,11 +22,13 @@ namespace GigHub2.Controllers
 
         public ActionResult Index()
         {
+            var logginUserId = User.Identity.GetUserId();
             var upcommingGigs = _context.Gigs
                 .Include(g => g.Artist)
                 .Include(g => g.Genre)
                 .Where(d =>
                 d.DateTime > DateTime.Now &&
+                d.ArtistId != logginUserId &&
                 !d.IsCanceled);
 
             var viewModel = new GigListViewModel

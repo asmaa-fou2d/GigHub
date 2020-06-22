@@ -16,14 +16,11 @@ namespace GigHub2.App_Start
             Mapper.CreateMap<ApplicationUser, UserDto>();
             Mapper.CreateMap<Gig, GigDto>();
             Mapper.CreateMap<Notification, NotificationDto>();
-
+            Mapper.CreateMap<Genre, GenreDto>();
         }
 
         protected override void Configure()
         {
-            Mapper.CreateMap<ApplicationUser, UserDto>();
-            Mapper.CreateMap<Gig, GigDto>();
-            Mapper.CreateMap<Notification, NotificationDto>();
         }
     }
 }
